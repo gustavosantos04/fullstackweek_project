@@ -23,7 +23,7 @@ model Category {
   name        String
   imageUrl    String
   restaurants Restaurant[]
-  products    Product[]
+  products    Products[]
 }
 
 model Products {
@@ -36,5 +36,5 @@ model Products {
   restaurantId       String
   restaurant         Restaurant @relation(fields: [restaurantId], references: [id])
   categoryId String
-  category           Category @relation(fields: [categoryIdId], references: [id])
+  category           Category @relation(fields: [categoryId], references: [id])
 }
